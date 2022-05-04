@@ -1,0 +1,62 @@
+ [
+    {
+      "question": "Peanuts are not nuts!",
+      "A": true,
+      "A_D": "Peanuts are legumes like lentils and peas."
+    },
+    {
+      "question": "Rhea was the mother of the Greek god Zeus",
+      "A": true,
+      "A_D": "Rhea"
+    },
+   {
+     "question": "The Big Apple is a nickname given to Washington D.C in 1971.",
+     "A": false,
+     "A_D": "The name refers to New York City"
+   },
+   {
+     "question": "People may sneeze or cough while sleeping deeply.",
+     "A": false,
+     "A_D": "We can’t sneeze or cough when in deep sleep. Our body must enter a state of wakefulness to do so. "
+   },
+   {
+     "question": "Copyrights depreciate over time.",
+     "A": true,
+     "A_D": "Because copyrights have an expiration date, their value decreases as that date approaches."
+   },
+   {
+     "question": "Emus can’t fly.",
+     "A": true,
+     "A_D": "Just like ostriches. Their wings aren’t strong enough to lift them."
+   },
+   {
+     "question": "There is no snow on Minecraft.",
+     "A": false,
+     "A_D": "Snow was added to Minecraft in 2010. It generates naturally in rare ice plains, spikes, and biomes."
+   },
+   {
+     "question": "Light travels in a straight line.",
+     "A": true,
+     "A_D": "Light travels in a straight line until it meets an obstacle that can influence its angle."
+   },
+   {
+     "question": "The Mona Liza was stolen from the Louvre in 1911.",
+     "A": true,
+     "A_D": "It was stolen by Vincenzo Peruggia who had worked at the Museum. The masterpiece was recovered two years later."
+   },
+   {
+     "question": "The film Moneyball is based on a true story.",
+     "A":true ,
+     "A_D": "The film is based on the story of Billy Beane, Oakland A’s General Manager, who used statistics to scout players and turn his team around."
+   },
+   {
+     "question": "A credit card and a debit card are the same.",
+     "A":false ,
+     "A_D": "A debit card allows you to spend money by drawing on funds in your bank account, while a credit card allows you to spend money by borrowing from the card issuer up to a certain limit."
+   },
+   {
+     "question": "Ethereum is the second-largest cryptocurrency after Bitcoin.",
+     "A": true,
+     "A_D": "Ethereum is a decentralized, open-source blockchain with smart contract functionality. It’s also the most actively used blockchain."
+   }
+  ]
