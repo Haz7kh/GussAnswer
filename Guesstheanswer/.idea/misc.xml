@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/khaled/Desktop/GussAnswer/Guesstheanswer/app/src/main/res/drawable/fragment_dialog.xml" value="0.1965" />
+        <entry key="..\:/Users/khaled/Desktop/GussAnswer/Guesstheanswer/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/khaled/Desktop/GussAnswer/Guesstheanswer/app/src/main/res/layout/fragment_blank.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/khaled/Desktop/GussAnswer/Guesstheanswer/app/src/main/res/layout/fragment_winner.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/khaled/Desktop/GussAnswer/Guesstheanswer/app/src/main/res/layout/fragment_winner2.xml" value="0.36666666666666664" />
         <entry key="..\:/barmejApk/Guesstheanswer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1995" />
         <entry key="..\:/barmejApk/Guesstheanswer/app/src/main/res/drawable/button_false.xml" value="0.1" />
         <entry key="..\:/barmejApk/Guesstheanswer/app/src/main/res/drawable/button_purple.xml" value="0.1" />

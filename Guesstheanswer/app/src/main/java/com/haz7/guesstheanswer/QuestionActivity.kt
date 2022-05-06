@@ -7,6 +7,9 @@ import android.os.CountDownTimer
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import org.json.JSONArray
 import java.io.IOException
 import java.io.InputStream
@@ -22,6 +25,12 @@ class QuestionActivity : AppCompatActivity() {
     lateinit var refresh: ImageButton
     lateinit var shareQuestion: ImageButton
     lateinit var score:TextView
+
+    //the winnerFragment :
+    val winner:FragmentManager=supportFragmentManager
+    val winnerTr:FragmentTransaction=winner.beginTransaction()
+    val winnerFragment=WinnerFragment()
+
 
 
 
@@ -94,15 +103,15 @@ class QuestionActivity : AppCompatActivity() {
 
 
 
-for (i in 0..QuestionsList.size){
-        var index = Random.nextInt(QuestionsList.size)
+        for (i in 0..QuestionsList.size){
+            var index = Random.nextInt(QuestionsList.size)
 
 
-              CurrentQuestion = QuestionsList[index]
-              CurreentAnswer = Answers[index]
-              CurrentAnswerDetails = AnswersDetails[index]
-              question.setText(CurrentQuestion)
-}
+            CurrentQuestion = QuestionsList[index]
+            CurreentAnswer = Answers[index]
+            CurrentAnswerDetails = AnswersDetails[index]
+            question.setText(CurrentQuestion)
+        }
 
 
 
@@ -117,7 +126,7 @@ for (i in 0..QuestionsList.size){
 
             showQuestion()
             winner()
-           
+
         }else{
             Toast.makeText(this,"Wrong answer",Toast.LENGTH_SHORT).show()
             scoreCount = scoreCount-10
@@ -126,7 +135,7 @@ for (i in 0..QuestionsList.size){
             intent.putExtra("QuestionAnswer", CurrentAnswerDetails)
             startActivity(intent)
 
-                showQuestion()
+            showQuestion()
             winner()
         }
 
@@ -148,7 +157,7 @@ for (i in 0..QuestionsList.size){
             intent.putExtra("QuestionAnswer", CurrentAnswerDetails)
             startActivity(intent)
 
-                showQuestion()
+            showQuestion()
             winner()
         }
 
@@ -162,19 +171,24 @@ for (i in 0..QuestionsList.size){
     }
     fun winner(){
         if(scoreCount>=50){
-            var alertDialog=AlertDialog.Builder(this@QuestionActivity)
-            alertDialog.setTitle("YOU ARE SMART AND WINNER :)").setMessage("Do you want to play again?")
-                .setIcon(R.drawable.ic_win_done_24)
-                . setCancelable(false)
-                .setNegativeButton("NO", DialogInterface.OnClickListener { dialogInterface, which ->
-                    dialogInterface.cancel()
-                    finish()
-                })
-                .setPositiveButton("YES", DialogInterface.OnClickListener { dialogInterface, which ->
-                    scoreCount=0
-                    score.text= scoreCount.toString()
-                })
-                alertDialog.create().show()
+            val bundle=Bundle()
+            bundle.putInt("Scour",scoreCount)
+            winnerFragment.arguments = bundle
+            winnerTr.add(R.id.QuestionLayout,winnerFragment)
+            winnerTr.commit()
+//            var alertDialog=AlertDialog.Builder(this@QuestionActivity)
+//            alertDialog.setTitle("YOU ARE SMART AND WINNER :)").setMessage("Do you want to play again?")
+//                .setIcon(R.drawable.ic_win_done_24)
+//                . setCancelable(false)
+//                .setNegativeButton("NO", DialogInterface.OnClickListener { dialogInterface, which ->
+//                    dialogInterface.cancel()
+//                    finish()
+//                })
+//                .setPositiveButton("YES", DialogInterface.OnClickListener { dialogInterface, which ->
+//                    scoreCount=0
+//                    score.text= scoreCount.toString()
+//                })
+//                alertDialog.create().show()
 
         }
 
